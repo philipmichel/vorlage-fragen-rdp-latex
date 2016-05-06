@@ -57,6 +57,9 @@ a4paper,     %% defines the paper size: a4paper (default), a5paper, letterpaper,
 % to use figures
 \usepackage{graphicx}
 
+\usepackage{array, arydshln}
+\setlength\extrarowheight{6pt}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
 %%% user defined commands
@@ -82,7 +85,7 @@ a4paper,     %% defines the paper size: a4paper (default), a5paper, letterpaper,
 %%%
 
 \newcommand{\SUBJECT}{MED,INSY,NTSI,...}
-%\newcommand{\CLASS}{5X}
+%\newcommand{\DATE}{}
 \newcommand{\EXAMINANT}{Name Pr\"ufer}
 
 %%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -129,24 +132,26 @@ a4paper,     %% defines the paper size: a4paper (default), a5paper, letterpaper,
 %%% 
 %%%
 
-\section*{M\"undliche Reife- und Diplomprüfung}
-
-% adds a line
-\hrule
 
 % table 
 \begin{table}[h]
-	\begin{tabular}{L{2cm}L{7cm}L{4cm}L{2cm}}
-		Fach: & \SUBJECT & Frage-Nr.\tiny{ des Fachs}: &  \\ \\
-		KandidatIn: &  & Klasse: &  \\ \\
-		Pr\"ufer: & \EXAMINANT & Pr\"ufungs-Nr.\tiny{ am Halbtag}: &  \\
+	\centering
+	\begin{tabular}{| L{6cm} | L{9cm} |}
+	\hline
+		\multicolumn{2}{|c|}{M\"undliche Reife- und Diplompr\"ufung} \\
+		\hline
+		Schuljahr 2015/16 & Datum:  \\
+		\hline
+		Pr\"ufer/in &  \EXAMINANT \\
+		\hline
+		Gegenstand: &  \SUBJECT \\
+		\hline
+		Themenbereich (Nr. und Titel): & \\
+		\hline
+		Aufgabenstellung & \\
+	\hline
 	\end{tabular}
 \end{table}
-
-\hrule
-
-% adds space between table and next section
-\vspace{1cm}
 
 \section*{Aufgabe - Titel der Aufgabe}
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
